@@ -1,9 +1,434 @@
 <html>
     <head>
-        
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Pangolin');
+@import url('https://fonts.googleapis.com/css?family=Kalam');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body,
+h1,
+p,
+html {
+    margin: 0;
+    height: 100%;
+    line-height: 1.8em;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.c-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    padding-left: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: #8F3938;
+    -webkit-box-shadow: 0 5px 30px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.25);
+}
+
+.c-nav__logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #E8BB00;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.c-nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: auto;
+    list-style: none;
+}
+
+.c-nav__list li {
+    margin: 0;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.c-nav__list a {
+    display: block;
+    padding: 0 2em;
+    line-height: 80px;
+    color: rgb(255, 217, 1);
+    -webkit-transition: .3s;
+    transition: .3s;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    font-family: 'Pangolin', cursive;
+}
+
+.c-nav__list a:hover {
+    color: #8F3938;
+    background: #E8BB00;
+}
+
+.c-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+    margin-top: 80px;
+    position: relative;
+    background: url(https://i.hizliresim.com/a1O1bQ.jpg) center/cover fixed;
+}
+
+.c-header::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.c-header__content {
+    padding: 60px 8vw;
+    position: relative;
+    z-index: 1;
+}
+
+.c-header__title {
+    font-size: 2em;
+    line-height: 1;
+    color: white;
+    font-family: 'Kalam', cursive;
+}
+
+.c-header__btn {
+    display: inline-block;
+    margin-top: 2.5em;
+    padding: 1em 2em;
+    font-weight: bold;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+
+.c-section {
+    padding: 100px 30px;
+    
+}
+
+.c-section__content {
+    max-width: 50rem;
+    margin: auto;
+}
+
+.c-section p {
+    line-height: 1.9;
+    
+}
+
+.c-section p {
+    margin-top: 1.5em;
+}
+
+.c-footer {
+    padding: 50px 8vw;
+    font-size: .88em;
+    color: #777;
+    text-align: center;
+    background: #111;
+}
+
+#news,
+#contact {
+    background: #A64945;
+    color: #CC8F1E;
+    font-family: 'Indie Flower', cursive;
+}
+
+#about {
+	background: #8C302C;
+	color: #CC8F1E;
+	font-family: 'Indie Flower', cursive;
+}
+
+
+
+
+/*.pimg1, .pimg2, .pimg3 {
+	position: relative;
+	opacity: 0.70;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}*/
+
+.pimg1 {
+    background: url(https://i.hizliresim.com/8N4N77.jpg);
+    min-height: 300px;
+    max-width: 1400px;
+    position: relative;
+    opacity: 0.95;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.85);
+}
+
+.pimg2 {
+    background: url(https://i.hizliresim.com/DyNy0v.jpg);
+    min-height: 300px;
+    position: relative;
+    opacity: 0.95;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.85);
+}
+
+.pimg3 {
+    background: url(https://i.hizliresim.com/YOXO7Z.jpg);
+    min-height: 300px;
+    position: relative;
+    opacity: 0.95;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.85);
+}
+
+.section {
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.ptext {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+
+}
+
+.ptext .border {
+    color: #FFAA35;
+    background: rgba(94, 32, 27, 0.4);
+    border-radius: 22px;
+    padding: 20px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 18px;
+}
+
+form {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+  max-height: 300px;
+  text-align: center;
+  
+}
+form input, form textarea {
+  border: 0;
+  outline: 0;
+  padding: 1em;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+  margin-top: 1em;
+  font-family: 'Merriweather', sans-serif;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  resize: none;
+}
+form input:focus, form textarea:focus {
+  -moz-box-shadow: 0 0px 2px #e74c3c !important;
+  -webkit-box-shadow: 0 0px 2px #e74c3c !important;
+  box-shadow: 0 0px 2px #e74c3c !important;
+}
+form #input-submit {
+  color: white;
+  background: #e74c3c;
+  cursor: pointer;
+}
+form #input-submit:hover {
+  -moz-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+  -webkit-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+  box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+}
+form textarea {
+  height: 126px;
+}
+
+.half {
+  float: left;
+  width: 48%;
+  margin-bottom: 1em;
+}
+
+.right {
+  width: 50%;
+}
+
+.left {
+  margin-right: 2%;
+}
+
+@media (max-width: 480px) {
+  .half {
+    width: 100%;
+    float: none;
+    margin-bottom: 0;
+  }
+}
+/* Clearfix */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+.submit {
+    height: 50px;
+}
+
+input:focus, textarea:focus {
+  border: 3px solid #3498DB;
+  box-shadow: none;
+}
+        </style>
     </head>
     <body>
-        Hellow World !!!
-        Tolga
+        <nav class="c-nav">
+            <a class="c-nav__logo" href="#">Paramore</a>
+            <ul class="c-nav__list">
+              <li>
+                <a href="#"><span class="ink">Home</span></a>
+              </li>
+              <li>
+                <a href="#news"><span class="ink">News</span></a>
+              </li>
+              <li>
+                <a href="#about"><span class="ink">About Us</span></a>
+              </li>
+              <li>
+                <a href="#contact"><span class="ink">Contact</span></a>
+              </li>
+            </ul>
+          </nav>
+          <header class="c-header">
+            <div class="c-header__content">
+              <h1 class="c-header__title"><br>Hayley Williams<br> from
+                <br> Paramore
+              </h1>
+          
+            </div>
+          </header>
+          <div class="pimg1">
+            <div class="ptext">
+              <span class="border trans">
+                          News
+                      </span>
+            </div>
+          </div>
+          
+          <section class="section section-dark c-section" id="news">
+            <div class="c-section__content">
+          
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis nisi accusantium aliquid obcaecati ut optio ratione nihil laudantium aut cumque sunt eaque qui hic suscipit, itaque molestiae! Eius aspernatur voluptatum ducimus delectus, similique veritatis
+                assumenda placeat eligendi numquam, rerum eveniet, nulla esse quis laudantium. Libero culpa voluptates, minima sed ipsa dignissimos asperiores adipisci ullam, earum sequi soluta beatae quas ipsum tenetur obcaecati accusamus, dolores quia nesciunt
+                magnam reprehenderit facere? Dolorem.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum eius, deserunt. Laborum corporis vitae ex commodi dolore, voluptatem accusantium rem atque pariatur impedit facilis, maxime asperiores et iusto debitis doloribus. Pariatur, quo assumenda
+                voluptates tempore earum! Eos doloribus ipsa optio rem veniam laudantium vero doloremque, magnam labore, facere quae corporis soluta fugiat voluptas modi delectus. Incidunt, mollitia optio consectetur delectus, nobis at! Quia voluptatem eaque adipisci
+                quibusdam expedita consectetur sequi aliquam earum voluptates vel, vitae minima, voluptas sunt quaerat itaque animi optio excepturi odit consequatur hic ipsum voluptatibus non vero quis illo? Animi consectetur dolore sunt recusandae hic numquam,
+                nulla fugit dignissimos suscipit quibusdam error vitae repellendus quasi officia quia qui atque nisi aliquid cumque ducimus. Eius voluptatibus inventore repellat ipsam quidem, nulla at, quod provident itaque, optio omnis explicabo sapiente ex cupiditate.
+                Accusamus dolorum rem explicabo quos voluptatibus aliquid rerum debitis vel eius, nemo aperiam laudantium sed animi dolorem.</p>
+            </div>
+          </section>
+          <div class="pimg2">
+            <div class="ptext">
+              <span class="border trans">
+                          About Us
+                      </span>
+            </div>
+          </div>
+          <section class="section section-light c-section" id="about">
+            <div class="c-section__content">
+          
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo ratione laboriosam quae amet dicta? Delectus error culpa odio atque animi ab nesciunt, illo eaque ad non eum velit minus optio, voluptatem nobis. Dignissimos sequi dicta, modi rem expedita.
+                Dolorem error at, deserunt similique atque deleniti molestias vero neque, fugiat vel inventore voluptatibus eveniet? Temporibus quam a libero illo nesciunt fuga quas dignissimos ex corporis fugiat commodi reiciendis sequi odio cum sunt, necessitatibus
+                voluptate, consectetur, illum? Aspernatur cumque impedit accusamus doloribus dignissimos aut pariatur, repellat vel amet, tenetur unde asperiores ipsa sapiente, earum eaque nisi sequi consequatur placeat voluptatum maxime recusandae.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit ut debitis reiciendis nostrum hic doloremque inventore modi minima, nulla quia, non autem temporibus cumque aut ex, tenetur laborum neque illum. Quisquam velit illum animi ratione
+                et a, quibusdam sapiente autem harum, fuga ducimus laudantium quia nobis accusamus quam commodi magni.</p>
+            </div>
+          </section>
+          <div class="pimg3">
+            <div class="ptext">
+              <span class="border trans">
+                          Contact
+                      </span>
+            </div>
+          </div>
+          <section class="section section-dark c-section" id="contact">
+            <div class="c-section__content">
+          
+              <p>We love feedback.Fill out the form below and we'll get back to you as soon as possible.</p>
+              <hr>
+              <form class="cf">
+                <div class="half left cf">
+                  <input type="text" id="input-name" placeholder="Name">
+                  <input type="email" id="input-email" placeholder="Email address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                  <input type="text" id="input-subject" placeholder="Subject">
+                </div>
+                <div class="half right cf">
+                  <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
+                </div>
+                <input class="submit" type="submit" value="Submit" id="input-submit">
+              </form>
+            </div>
+          </section>
+          <footer class="c-footer">
+            <p>Copyright by Tolga Arslan</p>
+          </footer>
     </body>
 </html>
