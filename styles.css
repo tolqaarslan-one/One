@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@800&family=Righteous&display=swap');
+
+body {
+    margin: 0;
+    text-align: center;
+    font-family: 'Righteous', cursive;
+        color: #ce9635;
+}
+
+#hero {
+    background-image: url("images/anitkabir.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 600px;
+
+
+}
+
+.text-1{
+    margin-top: 170px;
+    background-color:  rgba(9, 42, 76, 0.3);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.text-2 {
+    background-color: rgba(39, 91, 151, 0.7);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+#gradient {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to bottom, #114f90, #165191, #1a5393, #1e5694, #225895, #465a9f, #665aa5, #8458a7, #bf4e99, #ea4b78, #fc614b, #f38705);
+}
+
+#row-activities {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+} 
+
+.images {
+    width: 400px;
+    border-radius: 50%;
+}
+
+.text-3 {
+    padding: 40px;
+    font-size: 40px;
+}
+
+#guide {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-items: space-between;
+    border: 10px solid #092a4c;
+    border-radius: 5%;
+    margin: 20px;
+}
+
+.image-2 {
+    width: 200px;
+    padding: 50px;
+}
+
+.text-4 {
+    padding-top: 20px;
+    font-size: 30px;
+    color: #092a4c;
+}
+
+.text-5 {
+    padding-left: 50px;
+    padding-right: 40px;
+    color: #092a4c;
+}
+
+.text-6 {
+    padding-top: 80px;
+    color: #092a4c;
+    font-size: 40px;
+}
